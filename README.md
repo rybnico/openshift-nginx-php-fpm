@@ -24,6 +24,15 @@ oc process -f https://raw.githubusercontent.com/rybnico/openshift-nginx-php-fpm/
 
 Customize the php-fpm build according to your needs and start a build for the newly created BuildConfig to start a deployment.
 
+## Uninstall
+
+Delete all resources with label `app=my-fancy-app` and delete the PVC
+
+```
+oc delete all -l app=my-fancy-app
+oc delete pvc my-fancy-app-webroot
+```
+
 ## Built With
 
 * [Offical nginx image](https://hub.docker.com/_/nginx/) - defaults to stable
