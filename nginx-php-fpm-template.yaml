@@ -11,18 +11,10 @@ parameters:
     description: "Image for nginx- (and init-) container"
     value: "nginx:stable"
     required: true   
-  - name: NGINX_MEMORY_LIMIT
-    description: "Memory limit for nginx container"
-    value: "128Mi"
-    required: true
   - name: PHP_FPM_IMAGE
     description: "Source image for php-fpm build"
     value: "php:7.2-fpm"
     required: true   
-  - name: PHP_FPM_MEMORY_LIMIT
-    description: "Memory limit for php-fpm container"
-    value: "256Mi"
-    required: true
   - name: WEBROOT_SIZE
     value: "512Mi"
     required: true
@@ -58,9 +50,6 @@ objects:
           - name: http
             containerPort: 8080
             protocol: TCP
-          resources:
-            limits:
-              memory: ${NGINX_MEMORY_LIMIT}
           volumeMounts:
           - mountPath: /etc/nginx
             name: nginx-config
@@ -75,9 +64,6 @@ objects:
           env:
           - name: HOME
             value: /var/www
-          resources:
-            limits:
-              memory: ${PHP_FPM_MEMORY_LIMIT}
           restartPolicy: Always
           volumeMounts:
           - mountPath: /var/www
