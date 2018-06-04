@@ -26,5 +26,5 @@ Customize the php-fpm build according to your needs and start a build for the ne
 
 ## Built With
 
-* [Offical nginx image](https://hub.docker.com/_/nginx/) - defaults to last stable
+* [Offical nginx image](https://hub.docker.com/_/nginx/) - defaults to stable
 * [Offical php image](https://hub.docker.com/_/php/) - defaults to php:7.2-fpm
