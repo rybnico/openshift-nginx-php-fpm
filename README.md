@@ -3,7 +3,7 @@
 This template creates OpenShift resources for nginx with php-fpm
 
 * DeploymentConfig for a pod with nginx and php-fpm
-* BuiltConfig and ImageStream for php-fpm (to be able to include custom PHP modules)
+* BuiltConfig and ImageStream for php-fpm (to be able to customize the php-fpm version and include custom PHP modules)
 * ConfigMap for nginx configuration
 * Service for the nginx-php-fpm Pod
 * PersistentVolumeClaim for the webroot volume
