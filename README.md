@@ -1,6 +1,6 @@
 # OpenShift template for nginx and php-fpm
 
-:bangbang: **Moved to [https://gitlab.com/rybnico/openshift-nginx-php-fpm](https://gitlab.com/rybnico/openshift-nginx-php-fpm/import)** :bangbang:
+:bangbang: **Moved to [https://gitlab.com/rybnico/openshift-nginx-php-fpm](https://gitlab.com/rybnico/openshift-nginx-php-fpm)** :bangbang:
 
 
 This template creates OpenShift resources for nginx with php-fpm
